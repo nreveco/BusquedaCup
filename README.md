@@ -1,6 +1,6 @@
 # rm
 
-> Rick and mort
+> Buscador de productos vuejs consulta api laravel
 
 ## Build Setup
 
