@@ -46,7 +46,7 @@ import { mapState, mapActions } from 'vuex'
       searchProductos() {
         this.isLoading= true;
         this.items=[];
-        this.axios.get('http://localhost/apiCN/public/Productos/'+this.search)
+        this.axios.get('http://localhost/ApiLaravel/public/Productos/'+this.search)
           .then(response => {
             response.data.map(item => {  
               this.items.push({id:item.id, image: item.imagen, name: item.titulo, precio: item.precio });
@@ -70,7 +70,7 @@ import { mapState, mapActions } from 'vuex'
     },
     mounted(){
         this.isLoading= true;
-        this.axios.get('http://localhost/apiCN/public/Productos/0')
+        this.axios.get('http://localhost/ApiLaravel/public/Productos/0')
           .then(response => {
             response.data.map(item => {
             this.items.push({id:item.id, image: item.imagen, name: item.titulo, precio: item.precio });
