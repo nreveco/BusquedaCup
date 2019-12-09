@@ -36,7 +36,7 @@ import { mapState, mapActions } from 'vuex'
     },
     mounted(){
         this.isLoading= true;
-        this.axios.get('http://localhost/apiCN/public/Busquedas')
+        this.axios.get('http://localhost/ApiLaravel/public/Busquedas')
           .then(response => {
             response.data.map(item => {
             this.items.push({titulo:item.titulo, texto: item.valor})
